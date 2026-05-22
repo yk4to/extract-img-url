@@ -1,6 +1,6 @@
 {
   "name": "extract-img-url",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Extract first image url from markdown",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
