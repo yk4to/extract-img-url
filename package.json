@@ -19,7 +19,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "jest": "^29.5.0",
-    "ts-jest": "^29.0.5",
+    "ts-jest": "^29.4.11",
     "typescript": "^5.0.3"
   },
   "jest": {
@@ -27,14 +27,16 @@
       "ts",
       "js"
     ],
-    "globals": {
-      "ts-jest": {
-        "tsconfig": "tsconfig.json"
-      }
-    },
     "testMatch": [
       "**/tests/**/*.test.ts"
     ],
-    "preset": "ts-jest"
+    "transform": {
+      "^.+\\.tsx?$": [
+        "ts-jest",
+        {
+          "tsconfig": "tsconfig.json"
+        }
+      ]
+    }
   }
 }
