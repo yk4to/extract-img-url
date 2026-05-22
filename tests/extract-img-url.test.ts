@@ -49,4 +49,16 @@ describe('extractImgUrl', () => {
     expect(url).toBe('https://example.com/image1.png');
   });
 
+  test('should extract the first image url when markdown image is followed by html image on the same line', () => {
+    const markdown = '![](https://example.com/image1.png) <img src="https://example.com/image2.png" alt="alt text">';
+    const url = extractImgUrl(markdown);
+    expect(url).toBe('https://example.com/image1.png');
+  });
+
+  test('should extract the first image url when multiple html images exist on the same line', () => {
+    const markdown = '<img src="https://example.com/image1.png" alt="first"><img src="https://example.com/image2.png" alt="second">';
+    const url = extractImgUrl(markdown);
+    expect(url).toBe('https://example.com/image1.png');
+  });
+
 });
