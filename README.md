@@ -10,6 +10,8 @@ In this package, only regular expressions are used, so it is fast.
 npm install extract-img-url
 ```
 
+Node.js 18 or later is required.
+
 ## Usage
 
 ```typescript

@@ -11,6 +11,9 @@
   },
   "author": "yk4to",
   "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "keywords": [
     "markdown",
     "url",
